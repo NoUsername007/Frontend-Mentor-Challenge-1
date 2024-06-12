@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Figtree-Main;
+    src: url(./assets/fonts/static/Figtree-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Figtree-Bold;
+    src: url(./assets/fonts/static/Figtree-ExtraBold.ttf);
+}
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --black: hsl(0, 0%, 7%);
+    --grey: hsl(0, 0%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --font-size: 16px;
+    --font-family: Figtree-Main;
+    --bold-font: Figtree-Bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--yellow);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--white);
+    padding: 1.5em;
+    border-radius: 20px;
+    min-height: fit-content;
+    max-width: 400px;
+    min-width: 250px;
+    box-shadow: 10px 10px var(--black);
+}
+
+.Thumbnail {
+    height: 208px;
+    margin: 0 auto 15px auto;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.description {
+    font-size: var(--font-size);
+    margin-bottom: 15px;
+    color: var(--grey);
+}
+
+.yellow-tag {
+    color: var(--black);
+    background-color: var(--yellow);
+    display: inline-block;
+    padding: 0.5em;
+    font-family: var(--bold-font);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: var(--bold-font);
+    margin: 15px 0;
+    font-size: 1.75rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.user-info h3 {
+    font-family: var(--bold-font);
+    font-size: 18px;
+}
+
+.user-info img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+@media screen and (width <= 440px) {
+    main {
+        width: 85%;
+    }
+
+    .Thumbnail {
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.75rem;
+    }
+
+    .user-info h3 {
+        font-size: 1.1rem;
+    }
+}
